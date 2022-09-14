@@ -16,16 +16,16 @@ export class Header extends Component {
                     <nav id="menu">
                         <ul>
                             <li>
-                                <NavLink to='/home' activeClassName='active'>Inicio</NavLink>
+                                <NavLink to='/home' style={({ isActive }) => ({ color: isActive ? '#299ebf' : '#444' })}>Inicio</NavLink>
                             </li>
                             <li>
-                                <NavLink to='/Blog' activeClassName='active'>Blog</NavLink>
+                                <NavLink to='/Blog' style={({ isActive }) => ({ color: isActive ? '#299ebf' : '#444' })}>Blog</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/formulario" activeClassName='active'>Formulario</NavLink>
+                                <NavLink to="/formulario" style={({ isActive }) => ({ color: isActive ? '#299ebf' : '#444' })}>Formulario</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/peliculas" activeClassName='active'>Películas</NavLink>
+                                <NavLink to="/peliculas" style={({ isActive }) => ({ color: isActive ? '#299ebf' : '#444' })}>Películas</NavLink>
                             </li>
                         </ul>
                     </nav>

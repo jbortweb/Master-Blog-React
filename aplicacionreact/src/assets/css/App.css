@@ -87,10 +87,6 @@ body {
   color: #299ebf;
 }
 
-.active {
-  border-bottom: 2px solid #299ebf;
-}
-
 /*Slider*/
 
 #slider {

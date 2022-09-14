@@ -7,7 +7,7 @@ export class Slider extends Component {
         <h1>{this.props.title}</h1>
         {
           this.props.btn &&
-          <a href='#' className="btn-white">{this.props.btn}</a>
+          <a href='../Blog/Blog.js' className="btn-white">{this.props.btn}</a>
         }
     </div>
     )
