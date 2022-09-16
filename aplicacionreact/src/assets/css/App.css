@@ -197,6 +197,19 @@ body {
   cursor: pointer;
 }
 
+.btn-danger{
+  background: rgb(255, 0, 0);
+  color: white;
+  float:left;
+  margin-right: 20px;
+}
+
+.btn-warning{
+  background: rgb(250, 171, 0);
+  color: white;
+  float:left;
+}
+
 .btn-success {
   background: rgb(23, 150, 19);
 }
@@ -206,20 +219,25 @@ body {
 }
 
 input[type='text'],
+input[type='file'],
 textarea {
   width: 100%;
   height: 30px;
+  outline: none;
   border: 1 px solid #ccc;
   margin-bottom: 5px;
   padding: 3px;
   transition: 300ms all;
-  outline: none;
 }
 
 input[type='text']:focus,
 textarea:focus {
   outline: none;
   box-shadow: 0px 0px 2px #444 inset;
+}
+
+input[type='submit'] {
+  margin-top: 15px;;
 }
 
 /*Footer*/
@@ -257,8 +275,6 @@ textarea:focus {
 }
 
 .article-item .image-wrap img {
-  text-align: center;
-  object-fit: cover;
   width:100%;
   height:100%;
 }
@@ -298,13 +314,21 @@ textarea:focus {
 .article-detail .image-wrap {
   float:none;
   width: 100%;
-  height: 300px;
+  height: 200px;
   border: none;
+  margin-top: 30px;
 }
 
 .article-detail .image-wrap img {
   width: 100%;
   height: auto;
+  background-size:cover;
+
+}
+.article-item .article-img img{
+  max-width: 25%;
+  max-height: 150px;
+  background-size:cover;
 }
 
 .article-detail .subheader {

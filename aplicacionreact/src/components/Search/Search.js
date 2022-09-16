@@ -1,27 +1,27 @@
 import React, { Component } from 'react';
+import { useParams } from 'react-router-dom';
 import Articles from '../Articles/Articles';
 import Sidebar from '../Sidebar/Sidebar';
 import Slider from '../Slider/Slider';
 
-class Blog extends Component {
+const Search = () => {
 
-  render() {
+    const {search} = useParams();
 
     return (
         <div id='blog'>
             <Slider 
-              title='Blog' 
-              size='slider-small'
-            />
+                title={'Busqueda: ' + search} 
+                size='slider-small'/>
             <div className='center'>
                 <div id='content'>
-                  <Articles/>
+                  <Articles
+                  search = {search}/>
                 </div>
                 <Sidebar blog='true'/>
             </div>
         </div>
     )
   }
-}
 
-export default Blog
+export default Search

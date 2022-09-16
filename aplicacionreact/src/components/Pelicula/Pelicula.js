@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 
 export class Pelicula extends Component {
     
@@ -7,8 +8,6 @@ marcar = () => {
 }
 
     render() {
-
-        const pelicula = this.props.pelicula;
         const { titulo, image, } = this.props.pelicula;
 
         return (
@@ -18,7 +17,7 @@ marcar = () => {
                 </div>
                 <h2>{titulo}</h2>
                 <span className="date">Hace 5 minutos</span>
-                <a href="#">Leer más</a>
+                <Link to="/blog">Leer más</Link>
                 <br/>
                 <button onClick={this.marcar}>
                     Marcar como favorita

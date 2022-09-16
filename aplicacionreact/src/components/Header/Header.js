@@ -19,7 +19,7 @@ export class Header extends Component {
                                 <NavLink to='/home' style={({ isActive }) => ({ color: isActive ? '#299ebf' : '#444' })}>Inicio</NavLink>
                             </li>
                             <li>
-                                <NavLink to='/Blog' style={({ isActive }) => ({ color: isActive ? '#299ebf' : '#444' })}>Blog</NavLink>
+                                <NavLink to='/blog' style={({ isActive }) => ({ color: isActive ? '#299ebf' : '#444' })}>Blog</NavLink>
                             </li>
                             <li>
                                 <NavLink to="/formulario" style={({ isActive }) => ({ color: isActive ? '#299ebf' : '#444' })}>Formulario</NavLink>
