@@ -306,21 +306,28 @@ var controller = {
             
                     // Buscar el artículo, asignarle el nombre de la imagen y actualizar
 
-                Article.findOneAndUpdate({_id:articleId}, {image: file_name}, {new: true}, (err, articleUpdated) => {
+                if(articleId) {
+                
+                    Article.findOneAndUpdate({_id:articleId}, {image: file_name}, {new: true}, (err, articleUpdated) => {
 
-                    if(err || !articleUpdated) {
+                        if(err || !articleUpdated) {
+                            return res.status(200).send({
+                                status: 'error',
+                                message: 'Error al guardar el archivo'
+                            });
+                        }
+
                         return res.status(200).send({
-                            status: 'error',
-                            message: 'Error al guardar el archivo'
-                        });
-                    }
-
+                            status: 'success',
+                            article: articleUpdated
+                        }); 
+                    });
+                }else {
                     return res.status(200).send({
-                        status: 'success',
-                        article: articleUpdated
-                    }); 
-                })
-                    
+                        status:'success',
+                        image: file_name
+                    });
+                }                    
         };
 
     },  //End upload files
@@ -329,7 +336,7 @@ var controller = {
 
     getImage :(req,res) => {
         var file= req.params.image;
-        var path_file = './upload/articles/' + file;
+        var path_file = '../upload/articles/' + file;
 
         if (fs.existsSync(path_file,)) {
             return res.sendFile(path.resolve(path_file));

@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import { useParams } from 'react-router-dom';
 import Articles from '../Articles/Articles';
 import Sidebar from '../Sidebar/Sidebar';
