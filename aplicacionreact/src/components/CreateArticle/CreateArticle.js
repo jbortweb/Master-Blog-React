@@ -1,11 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Sidebar from '../Sidebar/Sidebar';
 import Global from '../../Global';
 import axios from 'axios';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import SimpleReactValidator from 'simple-react-validator';
+import swal from 'sweetalert';
 
-class CreateArticle extends Component {
+export function withRouter(Children){
+  return(props)=>{
+
+     const match  = {params: useParams()};
+     return <Children {...props}  match = {match}/>
+ }
+}
+
+class CreateArticle extends React.Component {
 
   url = Global.url;
   titleRef = React.createRef();
@@ -17,13 +26,17 @@ class CreateArticle extends Component {
     selectedFile : null
   };
 
-  componentDidMount() {
+  constructor(props){
+ 
+    super(props);
+
     this.validator = new SimpleReactValidator({
       messages: {
         required: 'El campo es obligatorio.'
       }
     });
-  }
+
+}
 
   changeState = () => {
     this.setState ({
@@ -56,6 +69,11 @@ class CreateArticle extends Component {
             article: res.data.article,
             status: 'waiting'
           });
+
+          swal(
+            'Artículo creado',
+            'El artículo ha sido creado correctamente', 'success'
+          )
 
           //Subir la imagen
 
@@ -109,9 +127,6 @@ class CreateArticle extends Component {
       this.setState({
         status: 'failed'
       });
-
-      this.validator.showMessages();
-      this.forceUpdate();
     }
   }
 
@@ -169,4 +184,4 @@ class CreateArticle extends Component {
   }
 }
 
-export default CreateArticle
+export default withRouter(CreateArticle);

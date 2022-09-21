@@ -368,6 +368,12 @@ textarea {
   float: left;
 }
 
+.imagEdit {
+  display: block;
+  width: 180px;
+  float: left;
+}
+
                   /*Responsive*/
 
 @media (max-width:1488px) {

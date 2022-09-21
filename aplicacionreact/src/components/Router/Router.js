@@ -10,6 +10,7 @@ import Formulario from '../Formulario/Formulario';
 import Search from '../Search/Search';
 import Article from '../Article/Article';
 import CreateArticle from '../CreateArticle/CreateArticle';
+import EditArticle from '../EditArticle/EditArticle';
 
  /* Parametros dinamicos url
   
@@ -68,6 +69,7 @@ const Router = () => {
             <Route exact path='/blog' element = {<Blog/>}/>
             <Route exact path='/blog/articulo/:id' element = {<Article/>}/>
             <Route exact path='/blog/crear' element = {<CreateArticle/>}/>
+            <Route exact path='/blog/editar/:id' element = {<EditArticle/>}/>
             <Route exact path='/peliculas' element = {<Peliculas/>}/>
             <Route exact path='/formulario' element = {<Formulario/>}/>
             <Route exact path='/blog/busqueda/:search' element = {<Search/>}/>
