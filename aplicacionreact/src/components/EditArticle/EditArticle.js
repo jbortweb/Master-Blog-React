@@ -29,7 +29,7 @@ class EditArticle extends React.Component {
 
   constructor(props) {
     super(props);
-    this.articleId = this.props.match.params;
+    this.articleId = this.props.match.params.id;
     this.getArticle(this.articleId);
     this.validator = new SimpleReactValidator({
       messages: {
@@ -69,7 +69,8 @@ class EditArticle extends React.Component {
     if (this.validator.allValid()) {
       //Hacer una peticion http por post para guardar el archivo
 
-      axios.put(this.url + "article/" + this.articleId, this.state.article).then((res) => {
+      axios.put(this.url + "article/" + this.articleId, this.state.article)
+      .then((res) => {
         if (res.data.article) {
           this.setState({
             article: res.data.article,
