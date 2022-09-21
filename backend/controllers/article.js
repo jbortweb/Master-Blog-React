@@ -336,7 +336,7 @@ var controller = {
 
     getImage :(req,res) => {
         var file= req.params.image;
-        var path_file = '../upload/articles/' + file;
+        var path_file = './upload/articles/' + file;
 
         if (fs.existsSync(path_file,)) {
             return res.sendFile(path.resolve(path_file));

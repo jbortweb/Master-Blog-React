@@ -6,7 +6,7 @@ var ArticleController = require('../controllers/article');
 var router = express.Router();
 
 var multipart = require("connect-multiparty");
-var md_upload = multipart({uploadDir: "../upload/articles"});
+var md_upload = multipart({uploadDir: "./upload/articles"});
 
 //Rutas prueba
 router.post('/datos-curso', ArticleController.datosCurso);

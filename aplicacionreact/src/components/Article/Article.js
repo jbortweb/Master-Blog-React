@@ -11,7 +11,7 @@ import swal from "sweetalert";
 const Article = () => {
   const url = Global.url;
 
-  const [articule, setArticule] = useState(false);
+  const [articule, setArticule] = useState(null);
   const [suces, setSuces] = useState("success");
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const Article = () => {
   const getArticle = () => {
     axios.get(url + "article/" + id).then((res) => {
       setArticule(res.data.article);
-      suces();
+      setSuces('success');
     });
   };
 
@@ -90,7 +90,7 @@ const Article = () => {
               onClick={() => {
                 deleteArticle(article._id);
               }}
-              className="btn btn-danger"
+              className="btn btn-danger btn-edit"
             >
               Eliminar
             </button>

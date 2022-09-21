@@ -308,7 +308,10 @@ input[type='submit'] {
   border-bottom: 1px solid #eee;
   padding-bottom: 10px;
 }
-
+.btn-edit {
+  margin-top: 10px;
+  height: 45px;
+}
 /*Article página*/
 
 .article-detail .image-wrap {

@@ -72,7 +72,8 @@ class CreateArticle extends React.Component {
 
           swal(
             'Artículo creado',
-            'El artículo ha sido creado correctamente', 'success'
+            'El artículo ha sido creado correctamente',
+            'success'
           )
 
           //Subir la imagen
