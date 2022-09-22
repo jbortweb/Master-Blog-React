@@ -269,7 +269,7 @@ var controller = {
 
         var file_name = 'Imagen no subida';
 
-        if(!req.files) {
+        if(!req.file) {
             return res.status(404).send({
                 status: 'error',
                 message: file_name
@@ -278,7 +278,7 @@ var controller = {
 
         // Conseguir nombre y extensión del archivo
 
-        var file_path = req.files.file0.path;
+        var file_path = req.file.file0.path;
         var file_split = file_path.split('/');
 
         var file_name = file_split[2];
@@ -330,13 +330,13 @@ var controller = {
                 }                    
         };
 
-    },  //End upload files
+    },  //End upload file
 
                                         // Metodo para mostrar imagen
 
     getImage :(req,res) => {
         var file= req.params.image;
-        var path_file = './upload/articles/' + file;
+        var path_file = '../upload/articles/' + file;
 
         if (fs.existsSync(path_file,)) {
             return res.sendFile(path.resolve(path_file));
