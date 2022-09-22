@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/jbortweb/Master-React/static/css/main.eed99400.css",
+    "main.js": "/jbortweb/Master-React/static/js/main.b32e679c.js",
+    "static/js/787.fafb621d.chunk.js": "/jbortweb/Master-React/static/js/787.fafb621d.chunk.js",
+    "static/media/react.svg": "/jbortweb/Master-React/static/media/react.103b5fa18196d5665a7e12318285c916.svg",
+    "static/media/imagesNot.svg": "/jbortweb/Master-React/static/media/imagesNot.fb960256525e57728701762724b91243.svg",
+    "index.html": "/jbortweb/Master-React/index.html",
+    "main.eed99400.css.map": "/jbortweb/Master-React/static/css/main.eed99400.css.map",
+    "main.b32e679c.js.map": "/jbortweb/Master-React/static/js/main.b32e679c.js.map",
+    "787.fafb621d.chunk.js.map": "/jbortweb/Master-React/static/js/787.fafb621d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eed99400.css",
+    "static/js/main.b32e679c.js"
+  ]
+}
