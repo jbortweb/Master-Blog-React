@@ -1,9 +1,6 @@
 # Master-Blog-React
-<h1 align="center">API películas themoviedb creado por jbortweb</h1>
-<h3 align="center">con el framework React</h3>
-
-Blog de artículos creados con ReactJs.
-Con Api y backend creado con Mongodb.
+<h1 align="center">Blog de artículos creados con ReactJs.</h1>
+<h3 align="center">Con Api y backend creado con Mongodb.</h3>
 
 
 ## Características
