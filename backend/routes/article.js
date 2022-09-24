@@ -6,12 +6,12 @@ var ArticleController = require('../controllers/article');
 var router = express.Router();
 
 var multipart = require("connect-multiparty");
-var md_upload = multipart({uploadDir: "../upload/articles"});
+var md_upload = multipart({uploadDir: "./upload/articles"});
 const multer = require('multer');
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, '../upload/articles')
+    cb(null, './upload/articles')
   },
   filename: function (req, file, cb) {
     var datetimestamp = Date.now();
